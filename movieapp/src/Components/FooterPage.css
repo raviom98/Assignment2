@@ -1,0 +1,10 @@
+.footerFix {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background-color: rgb(241, 234, 234);
+  color: rgb(146, 133, 133);
+  text-align: center;
+}
