@@ -100,6 +100,7 @@ class Login extends React.Component {
         <MuiThemeProvider>
           <div>
             {/* <AppBar title="Login" /> */}
+            <h2>Login </h2>
             <TextField
               hintText="Enter your Username"
               floatingLabelText="Username"
@@ -125,6 +126,13 @@ class Login extends React.Component {
             />
           </div>
         </MuiThemeProvider>
+
+        <div className="links">
+          <br></br>
+          <a href="/forgotpassword">Forgot Password?</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/register">Not a member yet? Register Now!</a>
+        </div>
       </div>
     );
   }

@@ -124,11 +124,16 @@ class Register extends Component {
     this.setState({ loginClicked: true });
   };
   render() {
+    if (this.state.loginClicked) {
+      return <Redirect push to={"/login"} />;
+    }
+
     return (
       <div>
         <MuiThemeProvider>
           <div>
             {/* <AppBar title="Register" /> */}
+            <h2>Register</h2>
             <TextField
               hintText="Enter your First Name"
               floatingLabelText="First Name"
