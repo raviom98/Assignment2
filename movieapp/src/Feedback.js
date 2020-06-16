@@ -3,6 +3,16 @@ import { Redirect } from "react-router-dom";
 import { FormControl } from "react-bootstrap";
 import { InputGroup } from "react-bootstrap";
 
+// .fieldname{
+//   margin-left: 2em;
+//   margin-top: 5px;
+//   min-width: 18em;
+//   height: 30px;
+//   padding: 0px 8px;
+//   font-size: 16px;
+//   font-family: 'Times New Roman', Times, serif;
+// }
+
 class Feeback extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +23,7 @@ class Feeback extends React.Component {
       givestar: "",
       feedbackdropdown: [1, 2, 3, 4, 5],
       loginClicked: false,
+      registerClicked: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -29,10 +40,16 @@ class Feeback extends React.Component {
   };
 
   render() {
+    if (this.state.registerClicked) {
+      return <Redirect push to={"/recorded"} />;
+    }
+
     return (
-      <div>
+      <div style={{ float: "left" }}>
         <h2>Rate the Course and Instructor</h2>
-        <label htmlFor="instructorname">Instructor Name</label>
+        <label className="fieldname" htmlFor="instructorname">
+          Instructor Name
+        </label>
         &nbsp;&nbsp;
         <input
           type="text"
@@ -44,9 +61,9 @@ class Feeback extends React.Component {
         />
         <br />
         <br />
-        <br />
-        <label htmlFor="coursename">Course Name</label>
-        &nbsp;&nbsp;
+        <label style={{ marginRight: 15 }} htmlFor="coursename">
+          Course Name
+        </label>
         <input
           type="text"
           name="coursename"
@@ -70,7 +87,8 @@ class Feeback extends React.Component {
         />
         <br />
         <br />
-        <div>Give star:</div> &nbsp;
+        <div style={{ float: "left" }}>Give star:</div> &nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <select>
           {this.state.feedbackdropdown.map((feed) => (
             <option key={feed.value} value={feed.value}>
@@ -78,6 +96,8 @@ class Feeback extends React.Component {
             </option>
           ))}
         </select>
+        <br />
+        <br />
         <div className="footer_1">
           <button type="button" className="button" onClick={this.registerClick}>
             Submit!

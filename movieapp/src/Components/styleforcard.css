@@ -1,0 +1,10 @@
+.course {
+  width: 100px;
+  height: 100px;
+  margin: 16px auto;
+  border: 5px solid burlywood;
+  border-radius: 100px;
+  background-color: gray;
+  box-shadow: 0 2px 3px #eee;
+  text-align: center;
+}

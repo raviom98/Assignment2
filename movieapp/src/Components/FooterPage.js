@@ -99,6 +99,14 @@ class FooterPage extends Component {
                   </li>
                 </ul> */}
               </MDBCol>
+              <MDBCol md="6">
+                <h5 className="title">Contact Us</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam.
+                </p>
+              </MDBCol>
             </MDBRow>
           </MDBContainer>
           <div className="footer-copyright text-center py-3">

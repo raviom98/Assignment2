@@ -4,7 +4,7 @@ import Home from "./Home";
 import { NotAMatch } from "./NotAMatch";
 import { Layout } from "./Components/Layout";
 import { NavigationBar } from "./Components/NavigationBar";
-import { Search } from "./Components/Search";
+import Search from "./Components/Search";
 import { Profile } from "./Components/Profile";
 import { MyBookings } from "./Components/MyBookings";
 import { Offers } from "./Components/Offers";
@@ -14,6 +14,7 @@ import FooterPage from "./Components/FooterPage";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Feedback from "./Feedback";
+import Recorded from "./Components/Recorded";
 
 class App extends Component {
   render() {
@@ -34,6 +35,7 @@ class App extends Component {
               <Route path="/helpandsupport" component={HelpAndSupport} />
               <Route path="/aboutus" component={AboutUs} />
               <Route path="/feedback" component={Feedback} />
+              <Route path="/recorded" component={Recorded} />
 
               <Route component={NotAMatch} />
             </Switch>
